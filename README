@@ -1,6 +1,12 @@
 # GPT Backend Integration for White Coat Way (WCW)
 
-This project is designed to serve as the backend for integrating a custom GPT model created via OpenAI's Custom GPT Builder. The backend handles API requests from the frontend (such as Webflow) and communicates with OpenAI's API to return responses from the custom GPT model.
+This project is designed to serve as the backend for integrating a custom GPT model created via OpenAI's Custom GPT Builder. 
+The backend handles API requests from the frontend (such as Webflow) and communicates with OpenAI's API to return responses from the custom GPT model.
+This project was initially planned as a database-based solution. However, due to multiple data pipeline issues and challenges 
+with using ChromeDriver for web scraping, we pivoted to training a Custom GPT model.
+
+Custom CSV files were created to train the GPT model, with all resources manually reviewed for accuracy. 
+The chatbot underwent extensive testing to ensure its successful operation and integration with the platform.
 
 ## Project Setup
 

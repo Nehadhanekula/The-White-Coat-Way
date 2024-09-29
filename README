@@ -1,0 +1,92 @@
+# GPT Backend Integration for White Coat Way (WCW)
+
+This project is designed to serve as the backend for integrating a custom GPT model created via OpenAI's Custom GPT Builder. The backend handles API requests from the frontend (such as Webflow) and communicates with OpenAI's API to return responses from the custom GPT model.
+
+## Project Setup
+
+### Prerequisites
+
+Before setting up the project, ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- NPM (comes with Node.js)
+- OpenAI API Key (from OpenAI's platform)
+- Model ID of your Custom GPT (created via the OpenAI Custom GPT Builder)
+
+### Project Structure
+
+The basic structure of the project:
+
+# White Coat Way (WCW) - Custom GPT Integration
+
+This project sets up a backend server to integrate a custom GPT model created using OpenAI’s Custom GPT Builder. The backend processes API requests from the front end (e.g., Webflow) and returns answers from the custom GPT model.
+
+## Project Overview
+
+The goal of this project is to provide an interactive chatbot feature for White Coat Way (WCW), allowing users to ask questions and receive responses based on data stored in the system. The chatbot is integrated with OpenAI's API to return responses from a custom GPT model tailored to medical students.
+
+## Prerequisites
+
+- **Node.js** (v14 or higher)
+- **OpenAI API Key** (available from OpenAI’s platform)
+- Custom GPT Model ID (created in OpenAI's Custom GPT Builder)
+
+## Installation
+
+1. Clone the repository:
+
+   git clone https://github.com/your-username/wcw-gpt-integration.git
+   cd wcw-gpt-integration
+Install the necessary dependencies:
+bash
+Copy code
+npm install
+Set up the OpenAI API key and GPT model ID in the server.js file:
+javascript
+Copy code
+const apiKey = 'your-openai-api-key';
+const model = 'your-custom-gpt-model-id';
+
+
+Running the Server
+
+--  To run the server locally:
+
+node server.js
+
+The server will start at http://localhost:3000.
+
+API Usage
+
+POST /ask: Send a question and get a response from the GPT model.
+
+Request Body:
+
+{
+  "question": "Your question here"
+}
+
+Response:
+
+
+{
+  "answer": "GPT's response"
+}
+
+
+-- Frontend Integration
+
+You can use JavaScript to send questions from your frontend (e.g., Webflow) to this backend and display the GPT model’s responses.
+
+fetch('https://your-backend-url.com/ask', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ question: 'What is the next step in my medical journey?' }),
+})
+  .then(response => response.json())
+  .then(data => {
+    console.log('Answer:', data.answer);
+  });
+
